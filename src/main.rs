@@ -1,6 +1,5 @@
-use std::{fs::File, io::{Write, stdin}, path::Path};
+use std::{fs::File, path::Path};
 use base64::prelude::*;
-use chksum_sha2_256::Chksumable;
 use sha2::{Digest, Sha256};
 
 fn main() {
