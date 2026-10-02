@@ -24,6 +24,8 @@ fn with_chksum(path: &Path) {
     println!("Reading from path {}", path.display());
     let file = File::open(path).expect("failed to open file");
     let digest = chksum_sha2_256::chksum(file).expect("failed to compute checksum");
+    let checksum = BASE64_STANDARD.encode(&digest);
+    println!("with_chksum: {}", checksum);
     println!("with_chksum: {}", digest);
 
 }
